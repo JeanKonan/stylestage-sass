@@ -1,29 +1,31 @@
-$color-primary: #3a00ff !default;
-$color-primary-alt: #6f6ffd !default;
-$color-secondary: #d42257 !default;
-$color-background: #d2fbf7 !default;
+$color-primary: #300300 !default;
+$color-secondary: #6D0D01 !default;
+$color-tertiary: #FDE9C4 !default;
+$color-other: #FFCA62 !default;
+$color-background: #fdfdfd !default;
 
 $brand-colors: (
   primary: $color-primary,
-  primary-alt: $color-primary-alt,
   secondary: $color-secondary,
+  tertiary: $color-tertiary,
+  other: $color-other
 ) !default;
 
-$color-body: scale-color(
-  $color-primary,
-  $lightness: -30%,
-  $saturation: -50%
-) !default;
-$color-gray: mix(#767676, $color-body, 70%) !default;
+// $color-body: scale-color(
+//   $color-primary,
+//   $lightness: -30%,
+//   $saturation: -50%
+// ) !default;
+// $color-gray: mix(#767676, $color-body, 70%) !default;
 
-$colors: map-merge(
-  $brand-colors,
-  (
-    background: $color-background,
-    text: $color-body,
-    light: #fff,
-  )
-);
+// $colors: map-merge(
+//   $brand-colors,
+//   (
+//     background: $color-background,
+//     text: $color-body,
+//     light: #fff,
+//   )
+// );
 
 @function color($key) {
   @return map-get($colors, $key);
@@ -33,7 +35,7 @@ $colors: map-merge(
   @return "%23" + str-slice("#{color($color)}", 2, -1);
 }
 
-$link-color: color(primary) !default;
+$link-color: color(secondary) !default;
 $border-radius: 8px !default;
 
 $font-weight-strong: 500 !default;
