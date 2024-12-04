@@ -13,21 +13,21 @@ $brand-colors: (
   other: $color-other
 ) !default;
 
-// $color-body: scale-color(
-//   $color-primary,
-//   $lightness: -30%,
-//   $saturation: -50%
-// ) !default;
-// $color-gray: mix(#767676, $color-body, 70%) !default;
+$color-body: scale-color(
+  $color-primary,
+  $lightness: -30%,
+  $saturation: -50%
+) !default;
+$color-gray: mix(#767676, $color-body, 70%) !default;
 
-// $colors: map-merge(
-//   $brand-colors,
-//   (
-//     background: $color-background,
-//     text: $color-body,
-//     light: #fff,
-//   )
-// );
+$colors: map-merge(
+  $brand-colors,
+  (
+    background: $color-background,
+    text: $color-body,
+    light: #fff,
+  )
+);
 
 @function color($key) {
   @return map-get($colors, $key);
