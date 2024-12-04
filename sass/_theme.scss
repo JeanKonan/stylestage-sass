@@ -1,4 +1,4 @@
-// This is a test comment
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Unbounded:wght@200..900&display=swap');
 
 $color-primary: #300300 !default;
 $color-secondary: #6D0D01 !default;
@@ -62,7 +62,8 @@ $font-sizes: (
   }
 
   --color-anchor: #{$link-color};
-  --font-family: "Baloo 2", sans-serif;
+  --font-family: "calistoga", sans-serif;
+  --font-title-family: "unbounded";
   --font-weight-strong: #{$font-weight-strong};
 
   @each $key, $size in $font-sizes {
