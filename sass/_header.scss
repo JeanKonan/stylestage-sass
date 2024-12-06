@@ -1,0 +1,69 @@
+// body {
+//     .skip-link {
+
+//     &::before {
+//         content: '';
+//         display: block;
+//         position: static;
+//         // top: -100px;
+//         width: 100%;
+//         height: 200px;
+//         background-image: url(../public/images/african.jpg);
+//         background-size: cover; // Ensures the image covers the pseudo-element
+//         background-position: center; // Centers the image
+//         background-repeat: no-repeat; // Prevents the image from repeating
+//     }
+// }
+// }
+header {
+    width: 100%;
+    height: 15rem;
+    padding: 2rem;
+    background-image: url(../public/images/african.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    color: $color-tertiary;
+    
+    .container {
+        padding: 1rem;
+        width: 70%;
+        height: 90%;
+        background: rgba($color: $color-primary, $alpha: .5);
+        border-radius: $border-radius;
+        border: .6rem dotted $color-primary;
+        box-sizing: content-box;
+
+        h2 {
+            text-align: left;
+        }
+
+        p {
+            // display: inline-block;
+            a {
+                text-decoration: none;
+                color: $color-tertiary;
+            }
+        }
+
+        .link-github {
+            padding: 1rem;
+            width: 100px;
+            height: 55px;
+            background-color: $color-tertiary;
+            border-radius: $border-radius;
+
+            svg {
+                display: inline;
+                width: 20px;
+                height: 20px;
+
+                path {
+                    fill: $color-primary;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,10 +1,15 @@
+body {
+    color: $color-primary;
+    background: $color-background;
+}
+
 h1,
 h2,
 h3,
 h4 {
   font-weight: var(--font-weight-strong);
   line-height: 1;
-  margin-bottom: 0.65em;
+  margin-bottom: 0.60em;
 }
 
 h1 {
