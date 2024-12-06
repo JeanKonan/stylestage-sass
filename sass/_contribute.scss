@@ -1,0 +1,85 @@
+#contribute {
+    background-color: $color-tertiary; 
+    padding: 3rem 2rem;
+    position: relative;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      color: $color-primary; 
+      font-family: "Arial", sans-serif;
+
+  
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: $color-primary;
+  
+        a {
+          color: $color-secondary;
+          text-decoration: underline;
+  
+          &:hover {
+            color: $color-other; 
+          }
+        }
+      }
+  
+      ol {
+        list-style: decimal inside;
+        padding-left: 1rem;
+  
+        li {
+          margin-bottom: 1rem;
+          font-size: 1rem;
+          line-height: 1.6;
+  
+          a {
+            color: $color-secondary;
+            font-weight: bold;
+  
+            &:hover {
+              color: $color-other;
+            }
+          }
+        }
+      }
+    }
+  
+    footer {
+      background-color: $color-other; 
+      padding: 2rem;
+      text-align: center;
+  
+      h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-primary;
+        margin-bottom: 1rem;
+      }
+  
+      a {
+        display: inline-block;
+        background-color: $color-secondary; 
+        color: $color-background; 
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 4px;
+        margin: 0.5rem;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: $color-primary;
+        }
+  
+        &:focus {
+          outline: 2px dashed $color-other; 
+          outline-offset: 3px;
+        }
+      }
+    }
+  }
+  

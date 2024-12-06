@@ -276,4 +276,49 @@ header .container .link-github svg path {
   fill: #300300;
 }
 
+#about {
+  background-color: #fdfdfd;
+  padding: 3rem 2rem;
+  position: relative;
+}
+#about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6D0D01;
+  margin-bottom: 1.5rem;
+}
+#about p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+#about p a {
+  color: #6D0D01;
+  text-decoration: underline;
+}
+#about p a:hover {
+  color: #FFCA62;
+}
+#about blockquote {
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #6D0D01;
+  background-color: #FDE9C4;
+  color: #300300;
+}
+#about blockquote p {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+}
+#about blockquote p strong {
+  color: #6D0D01;
+}
+#about blockquote p a {
+  color: #6D0D01;
+}
+#about blockquote p a:hover {
+  color: #FFCA62;
+}
+
 /*# sourceMappingURL=style.css.map */

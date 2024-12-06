@@ -1,0 +1,54 @@
+#about {
+  background-color: $color-background; 
+  padding: 3rem 2rem;
+  position: relative;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $color-secondary;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+
+      a {
+        color: $color-secondary;
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-other;
+        }
+      }
+    }
+
+    blockquote {
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid $color-secondary;
+      background-color: $color-tertiary;
+      color: $color-primary;
+
+      p {
+        font-size: 1rem;
+        font-style: italic;
+        margin: 0;
+
+        strong {
+          color: $color-secondary;
+        }
+
+        a {
+          color: $color-secondary;
+
+          &:hover {
+            color: $color-other;
+          }
+        }
+      }
+    }
+  
+}
