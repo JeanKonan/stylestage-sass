@@ -1,77 +1,69 @@
-.profile {
-  width: 95vw;
-  max-width: 80ch;
-  margin: 1rem auto 10vh;
-  padding: 1.25rem;
-  z-index: 1;
+// _profile.scss
 
-  h4 {
-    margin: 0;
-    color: var(--color-secondary);
-    text-align: center;
-  }
+.profile {
+  background-color: $color-tertiary; // Light beige background
+  padding: 2rem 1.5rem;
+  border-radius: 8px; // Rounded corners for profile section
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  color: $color-primary; // Primary color for text
 
   .container {
-    display: grid;
-    justify-items: center;
-    grid-gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
 
-    > a {
-      min-height: 2em;
-      border: 2px solid currentColor;
-      color: var(--color-secondary);
+    h4 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $color-secondary; // Secondary color for heading
+      margin-bottom: 1rem;
     }
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    li {
-      display: flex;
-      padding: 0.45em;
-
-      span:nth-child(1) {
-        width: auto;
-        margin-right: 0.25em;
-        font-weight: var(--font-weight-strong);
-      }
-
-      span:nth-child(2) {
-        flex-grow: 1;
-        word-break: break-word;
-
-        a {
-          color: inherit;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 180ch) {
-    position: fixed;
-    right: 2vmin;
-    bottom: 2vmin;
-    max-width: 30ch;
-    margin-bottom: 0;
-    border-radius: var(--border-radius);
-    background-color: var(--color-light);
-    box-shadow: 0 2px 5px rgba(color(primary), 0.15);
 
     ul {
-      justify-content: unset;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
 
       li {
-        padding: 0;
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: $color-primary;
 
-        span:nth-child(1) {
-          width: 8ch;
-          margin-right: 0;
+        span:first-child {
+          font-weight: bold;
+          margin-right: 0.5rem;
         }
+
+        a {
+          color: $color-secondary; // Secondary color for links
+          text-decoration: underline;
+
+          &:hover {
+            color: $color-other; // Accent hover color
+          }
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      background-color: $color-secondary; // Secondary color for button
+      color: $color-background; // White text
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $color-primary; // Darker hover effect
+      }
+
+      &:focus {
+        outline: 2px dashed $color-other; // Focus outline for accessibility
+        outline-offset: 3px;
       }
     }
   }

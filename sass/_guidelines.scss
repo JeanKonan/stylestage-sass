@@ -1,41 +1,80 @@
+// _guidelines.scss
+
 #guidelines {
-  h3 {
-    display: inline-block;
-    transform: rotate(-8deg) translateX(-10%);
-    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  background-color: $color-tertiary; // Light beige background
+  padding: 3rem 2rem;
 
-    @supports (background-clip: text) or (-webkit-background-clip: text) {
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: $color-primary; // Primary color for text
+    font-family: "Arial", sans-serif;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $color-secondary; // Secondary color for headings
+      margin-bottom: 1.5rem;
     }
 
-    @media (min-width: 120ch) {
-      transform: rotate(-8deg) translateX(-30%);
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $color-primary;
+      margin-bottom: 1rem;
     }
-  }
 
-  @supports (background-clip: text) or (-webkit-background-clip: text) {
-    p:nth-of-type(2) {
-      position: relative;
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
 
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: rotate(4deg) translate(4.75rem, -3.5rem);
-        transform-origin: left center;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: var(--color-primary-alt);
-        font-size: 0.9em;
-        font-weight: normal;
-        content: "← Whoa, text gradients!";
+      a {
+        color: $color-secondary;
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-other; // Highlight link hover with other color
+        }
       }
     }
-  }
 
-  .container > a {
-    align-self: center;
+    ul,
+    ol {
+      padding-left: 2rem;
+      margin: 1.5rem 0;
+
+      li {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.6;
+
+        a {
+          color: $color-secondary;
+          font-weight: bold;
+
+          &:hover {
+            color: $color-other;
+          }
+        }
+      }
+    }
+
+    .link-guidelines {
+      display: inline-block;
+      background-color: $color-secondary; // Secondary color for button
+      color: $color-background; // White text
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1.5rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
   }
 }

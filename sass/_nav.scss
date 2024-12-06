@@ -1,35 +1,51 @@
+// _nav.scss
+
 nav {
+  background-color: $color-primary; // Dark background for the nav
+  color: $color-background; // White text for contrast
+  padding: 1rem 2rem;
+
   ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; // Center-align navigation links
+    align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
-
-    a {
-      display: inline-grid;
-      padding: 0.5rem;
-      color: var(--color-secondary);
-      font-size: 1.25rem;
-      text-decoration: none;
-
-      &::before {
-        width: 100%;
-        height: 0.33em;
-        background-color: var(--color-secondary);
-        opacity: 0.15;
-        content: "";
-      }
-
-      &:hover::before,
-      &:focus::before {
-        opacity: 1;
-      }
-    }
+    gap: 2rem; // Space between navigation items
 
     li {
-      margin: 0.25rem;
+      a {
+        color: $color-background; // White text for links
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+          color: $color-primary; // Dark text on hover
+          background-color: $color-other; // Accent color for hover background
+          border-radius: 4px; // Rounded corners for hover effect
+        }
+
+        &:focus {
+          outline: 2px dashed $color-other; // Accessible focus outline
+          outline-offset: 3px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    ul {
+      flex-direction: column; // Stack items vertically on smaller screens
+      gap: 1rem; // Adjust spacing for mobile
+    }
+
+    li a {
+      font-size: 0.9rem; // Slightly smaller font size on mobile
+      padding: 0.75rem 1.5rem; // Adjust padding for better touch targets
     }
   }
 }

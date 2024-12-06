@@ -1,8 +1,28 @@
+// _logomark.scss
+
 @mixin logomark() {
   display: inline-grid;
-  min-height: var(--logomark-height);
-  padding: var(--logomark-padding);
-  border: 0.16em solid var(--color-primary);
-  box-shadow: 0.12em 0.12em var(--color-secondary);
-  place-content: center;
+  min-height: 4rem; // Adjust height based on design needs
+  min-width: 4rem; // Ensure square shape
+  padding: 0.5rem;
+  border: 0.16em solid $color-secondary; // Border uses the secondary color
+  box-shadow: 0.12em 0.12em $color-other; // Shadow with the accent color
+  border-radius: 50%; // Rounded shape for the logomark
+  background-color: $color-tertiary; // Light beige background for contrast
+  color: $color-primary; // Text or icon color
+  place-content: center; // Center content inside the logomark
+  font-size: 1.5rem; // Adjust font size for text or icons
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1); // Slight zoom effect on hover
+    box-shadow: 0.2em 0.2em $color-secondary; // Deeper shadow on hover
+  }
+
+  &:focus {
+    outline: 2px dashed $color-other;
+    outline-offset: 3px;
+  }
 }

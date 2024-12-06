@@ -1,59 +1,90 @@
-/*
- * [Modified] Modern CSS Reset
- * @link https://github.com/hankchizljaw/modern-css-reset
-*/
+// _reset.scss
 
-/* Box sizing rules */
+/* Basic Reset */
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Remove default styles for common elements */
+html {
+  font-size: 100%; /* Set base font size for scalability */
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-background; // Consistent background
+  color: $color-primary; // Default text color
+  font-family: "Arial", sans-serif;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-html {
-  overflow-x: hidden;
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  font-size: 100%;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
-  overflow-x: hidden;
+/* Remove table border-spacing and collapse borders */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* Make images easier to work with */
-img {
-  display: block;
-  max-width: 100%;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
+/* Remove default button and input styles */
 button,
+input,
 textarea,
 select {
-  font: inherit;
+  margin: 0;
+  font: inherit; /* Ensure inputs and buttons inherit font styles */
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/* Normalize images and media */
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure consistent form element alignment */
+input,
+textarea,
+button,
+select {
+  vertical-align: middle;
+}
+
+/* Reset quotes */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
 }
