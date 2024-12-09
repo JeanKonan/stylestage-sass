@@ -1,11 +1,11 @@
 aside#styles {
     background: $color-tertiary;
     color: $color-primary;
-
+ 
     .container {
         text-align: center;
         padding: 5rem;
-
+ 
         >a {
             background: $color-primary;
             color: $color-tertiary;
@@ -15,7 +15,7 @@ aside#styles {
             margin: 0 auto;
             margin-top: 1rem;
         }
-
+ 
         ul.features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -23,7 +23,7 @@ aside#styles {
             width: 60%;
             text-align: center;
             margin: 0 auto;
-            
+           
             li {
                 padding: 1rem;
                 width: 10rem;
