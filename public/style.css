@@ -452,6 +452,40 @@ header .container .link-github svg path {
   background-color: #300300;
 }
 
+aside#styles {
+  background: #FDE9C4;
+  color: #300300;
+}
+aside#styles .container {
+  text-align: center;
+  padding: 5rem;
+}
+aside#styles .container > a {
+  background: #300300;
+  color: #FDE9C4;
+  display: block;
+  padding: 0.5rem;
+  width: 14rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+aside#styles .container ul.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+aside#styles .container ul.features li {
+  padding: 1rem;
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid #300300;
+  align-content: center;
+  margin: 0 auto;
+}
+
 aside.profile {
   background: #300300;
 }
@@ -471,7 +505,7 @@ aside.profile .container ul li a {
   text-decoration: none;
   color: #FDE9C4;
 }
-aside.profile .container > a:last-of-type {
+aside.profile .container > a {
   display: block;
   padding: 0.5rem;
   max-width: 14rem;
