@@ -452,4 +452,91 @@ header .container .link-github svg path {
   background-color: #300300;
 }
 
+.page-footer {
+  background-color: #300300;
+  color: #fdfdfd;
+  padding: 1.5rem 1rem;
+}
+.page-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.page-footer .container p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.page-footer .container p a {
+  color: #FFCA62;
+  text-decoration: underline;
+}
+.page-footer .container p a:hover {
+  color: #FDE9C4;
+}
+.page-footer .container ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.page-footer .container ul li a {
+  display: inline-block;
+  background-color: #6D0D01;
+  color: #fdfdfd;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.page-footer .container ul li a:hover {
+  background-color: #300300;
+}
+.page-footer .container ul li a:focus {
+  outline: 2px dashed #FFCA62;
+  outline-offset: 2px;
+}
+.page-footer .container ul li a svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+.page-footer .container ul li a svg path {
+  fill: #fdfdfd;
+}
+.page-footer .container .link-github {
+  background-color: #6D0D01;
+  color: #fdfdfd;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.page-footer .container .link-github svg {
+  margin-right: 0.5rem;
+}
+.page-footer .container .link-github:hover {
+  background-color: #300300;
+}
+.page-footer .container strong {
+  font-weight: bold;
+}
+.page-footer .credits {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #FDE9C4;
+}
+.page-footer .credits a {
+  color: #FFCA62;
+  text-decoration: underline;
+}
+.page-footer .credits a:hover {
+  color: #FDE9C4;
+}
+
 /*# sourceMappingURL=style.css.map */
