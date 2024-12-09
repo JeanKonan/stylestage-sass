@@ -1,0 +1,31 @@
+aside.profile {
+    background: $color-primary;
+
+    .container{
+        color: $color-tertiary;
+        padding: 5rem;
+        text-align: center;
+
+        ul {
+            display: inline-block;
+            li {
+                display: inline-block;
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: $color-tertiary;
+                }
+            }
+        }
+
+        >a:last-of-type {
+            display: block;
+            padding: .5rem;
+            max-width: 14rem;
+            background: $color-tertiary;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+    }
+}

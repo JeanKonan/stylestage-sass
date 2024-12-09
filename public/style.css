@@ -452,4 +452,32 @@ header .container .link-github svg path {
   background-color: #300300;
 }
 
+aside.profile {
+  background: #300300;
+}
+aside.profile .container {
+  color: #FDE9C4;
+  padding: 5rem;
+  text-align: center;
+}
+aside.profile .container ul {
+  display: inline-block;
+}
+aside.profile .container ul li {
+  display: inline-block;
+  list-style: none;
+}
+aside.profile .container ul li a {
+  text-decoration: none;
+  color: #FDE9C4;
+}
+aside.profile .container > a:last-of-type {
+  display: block;
+  padding: 0.5rem;
+  max-width: 14rem;
+  background: #FDE9C4;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */
