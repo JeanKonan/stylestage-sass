@@ -11,10 +11,10 @@
   --font-family: "calistoga", sans-serif;
   --font-title-family: "unbounded";
   --font-weight-strong: 500;
-  --font-size-h1: 3rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 1.2rem;
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.3rem;
+  --font-size-h4: 1.15rem;
   --font-size-text: 1rem;
   --border-radius: 15px;
 }
@@ -182,49 +182,119 @@ a {
   font-weight: var(--font-weight-strong);
 }
 
+body .skip-link {
+  display: none;
+}
+
 header {
   width: 100%;
   height: 15rem;
-  padding: 2rem;
-  background-image: url(../public/images/african.jpg);
+  position: relative;
+  box-sizing: content-box;
+}
+header::before {
+  display: flex;
+  position: absolute;
+  content: "";
+  background-image: url(../public/images/bg-pic.jpg);
+  width: 50%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-sizing: content-box;
-  color: #FDE9C4;
+  transition: width 0.3s ease;
 }
 header .container {
-  padding: 1rem;
-  width: 70%;
-  height: 90%;
-  background: rgba(48, 3, 0, 0.5);
-  border-radius: 15px;
-  border: 0.6rem dotted #300300;
-  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin-left: 50%;
+  padding: 0 2rem;
+  background: #FDE9C4;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+header .container h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 header .container h2 {
+  text-align: left;
+  font-size: 1.5rem;
+}
+header .container p {
+  display: inline;
   text-align: left;
 }
 header .container p a {
   text-decoration: none;
-  color: #FDE9C4;
+  color: #300300;
 }
 header .container .link-github {
-  padding: 1rem;
-  width: 100px;
-  height: 55px;
-  background-color: #FDE9C4;
-  border-radius: 15px;
+  display: inline;
+  padding: 0.5rem;
+  width: 14rem;
+  background-color: #300300;
+  color: #FDE9C4;
+  text-align: center;
 }
-header .container .link-github svg {
+header .container .link-github span {
+  vertical-align: middle;
+  margin: 0 auto;
+}
+header .container .link-github span svg {
   display: inline;
   width: 20px;
   height: 20px;
 }
-header .container .link-github svg path {
-  fill: #300300;
+header .container .link-github span svg path {
+  fill: #FDE9C4;
 }
 
+@media (max-width: 768px) {
+  header::before {
+    width: 30%;
+  }
+  header .container {
+    width: 70%;
+    margin-left: 30%;
+    padding: 1rem;
+  }
+  header .container h1 {
+    font-size: 1.5rem;
+  }
+  header .container h2 {
+    font-size: 1.2rem;
+  }
+  header .container p {
+    font-size: 1rem;
+  }
+  header .container .link-github {
+    width: auto;
+    padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  header::before {
+    width: 40%;
+  }
+  header .container {
+    width: 60%;
+    margin-left: 40%;
+    padding: 0.5rem;
+  }
+  header .container h1 {
+    font-size: 1.2rem;
+  }
+  header .container h2 {
+    font-size: 1rem;
+  }
+  header .container p {
+    font-size: 0.9rem;
+  }
+}
 #about {
   display: flex;
   flex-direction: column;
