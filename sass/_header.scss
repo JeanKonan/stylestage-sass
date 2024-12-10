@@ -63,6 +63,18 @@ header {
             color: $color-tertiary;
             text-align: center;
 
+            &:hover {
+                background: $color-tertiary;
+                color: $color-primary;
+                border: 1px solid $color-primary;
+
+                svg {
+                    path {
+                        fill: $color-primary;
+                    }
+                }
+            }
+
             span {
                 vertical-align: middle;
                 margin: 0 auto;

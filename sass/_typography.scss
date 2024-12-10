@@ -1,12 +1,23 @@
 body {
     color: $color-primary;
     background: $color-background;
+    font-family:  var(--font-family);
+}
+
+#main {
+    width: 70vw;
+    margin: auto;
+
+    @media (max-width: 680px) {
+        width: 85vw;
+    }
 }
 
 h1,
 h2,
 h3,
 h4 {
+    font-family: var(--font-title-family);
   font-weight: var(--font-weight-strong);
   line-height: 1;
   margin-bottom: 0.60em;
@@ -23,11 +34,18 @@ h2 {
   text-align: center;
 }
 
-#main h2 {
-  background-color: var(--color-primary);
-  align-self: center;
-  color: var(--color-background);
-  padding: 0.25em 0.5em;
+h1, h2 {
+    position: relative;
+
+    &::before {
+        display: inline-block;
+        content: '◈';
+        margin-left: -.5rem;
+        margin-right: .5rem;
+        text-align: center;
+        font-size: $font-size-h2;
+        align-content: center;
+    }
 }
 
 h3 {
@@ -45,6 +63,12 @@ li {
 
 p {
   margin: 0 0 1rem;
+
+  a {
+    &:hover {
+        text-decoration: underline;
+    }
+  }
 }
 
 article .container {
@@ -71,7 +95,8 @@ strong {
 }
 
 a {
-  color: var(--color-anchor);
+//   color: var(--color-anchor);
+font-weight: $font-weight-strong;
 }
 
 // blockquote {

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Calistoga&family=Unbounded:wght@200..900&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@200..900&display=swap");
 :root {
   --color-primary: #300300;
   --color-secondary: #6D0D01;
@@ -8,9 +9,13 @@
   --color-text: rgb(25.2, 9.45, 8.4);
   --color-light: #fff;
   --color-anchor: #6D0D01;
-  --font-family: "calistoga", sans-serif;
+  --font-family: "Charis SIL", serif;
   --font-title-family: "unbounded";
+<<<<<<< HEAD
   --font-weight-strong: 500;
+=======
+  --font-weight-strong: 600;
+>>>>>>> ed77c7ce0a4495bd2db8a23f15a558fbc96d8e84
   --font-size-h1: 2rem;
   --font-size-h2: 1.5rem;
   --font-size-h3: 1.3rem;
@@ -111,12 +116,24 @@ q::after {
 body {
   color: #300300;
   background: #fdfdfd;
+  font-family: var(--font-family);
+}
+
+#main {
+  width: 70vw;
+  margin: auto;
+}
+@media (max-width: 680px) {
+  #main {
+    width: 85vw;
+  }
 }
 
 h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-title-family);
   font-weight: var(--font-weight-strong);
   line-height: 1;
   margin-bottom: 0.6em;
@@ -133,11 +150,17 @@ h2 {
   text-align: center;
 }
 
-#main h2 {
-  background-color: var(--color-primary);
-  align-self: center;
-  color: var(--color-background);
-  padding: 0.25em 0.5em;
+h1, h2 {
+  position: relative;
+}
+h1::before, h2::before {
+  display: inline-block;
+  content: "◈";
+  margin-left: -0.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  align-content: center;
 }
 
 h3 {
@@ -156,6 +179,9 @@ li {
 p {
   margin: 0 0 1rem;
 }
+p a:hover {
+  text-decoration: underline;
+}
 
 article .container > ul:not(.features) > li + li,
 article .container > ol > li + li {
@@ -173,7 +199,7 @@ strong {
 }
 
 a {
-  color: var(--color-anchor);
+  font-weight: 600;
 }
 
 #guidelines p:nth-of-type(1),
@@ -240,6 +266,14 @@ header .container .link-github {
   color: #FDE9C4;
   text-align: center;
 }
+header .container .link-github:hover {
+  background: #FDE9C4;
+  color: #300300;
+  border: 1px solid #300300;
+}
+header .container .link-github:hover svg path {
+  fill: #300300;
+}
 header .container .link-github span {
   vertical-align: middle;
   margin: 0 auto;
@@ -295,6 +329,47 @@ header .container .link-github span svg path {
     font-size: 0.9rem;
   }
 }
+nav {
+  background: #FFCA62;
+  padding: 1rem;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+nav ul li {
+  text-transform: uppercase;
+  height: 100%;
+}
+nav ul li:not(:last-of-type):after {
+  position: absolute;
+  content: "◈";
+  margin-left: 0.3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #6D0D01;
+}
+nav ul li a {
+  display: inline;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  height: 100%;
+}
+nav ul li a:hover {
+  background: #300300;
+  color: #FFCA62;
+}
+@media (max-width: 900px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
 #about {
   display: flex;
   flex-direction: column;
@@ -383,43 +458,35 @@ header .container .link-github span svg path {
   max-width: 1200px;
   margin: 0 auto;
 }
-#guidelines .container h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #6D0D01;
-  margin-bottom: 1.5rem;
-}
 #guidelines .container h3 {
   font-size: 1.5rem;
-  font-weight: bold;
   color: #6D0D01;
   margin-bottom: 1rem;
 }
 #guidelines .container p {
-  font-size: 1rem;
-  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 #guidelines .container p a {
   color: #6D0D01;
-  text-decoration: underline;
+  text-decoration: none;
 }
 #guidelines .container p a:hover {
   color: #FFCA62;
 }
 #guidelines .container .link-guidelines {
-  display: inline-block;
-  background-color: #6D0D01;
+  display: block;
+  background-color: #300300;
   color: #fdfdfd;
-  font-size: 1rem;
-  font-weight: bold;
+  width: 14rem;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
+  margin: 0 auto;
 }
 #guidelines .container .link-guidelines:hover {
-  background-color: #300300;
+  background: #fdfdfd;
+  color: #300300;
+  border: 1px solid #300300;
 }
 #guidelines .container .link-guidelines:focus {
   outline: 2px dashed #FFCA62;
@@ -427,28 +494,21 @@ header .container .link-github span svg path {
 }
 
 #contribute {
-  background-color: #FDE9C4;
-  padding: 3rem 2rem;
+  padding: 2rem;
   position: relative;
 }
 #contribute .container {
-  max-width: 1200px;
   margin: 0 auto;
-  color: #300300;
-  font-family: "Arial", sans-serif;
 }
 #contribute .container p {
-  font-size: 1rem;
-  line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: #300300;
 }
 #contribute .container p a {
-  color: #6D0D01;
-  text-decoration: underline;
+  text-decoration: none;
+  color: #300300;
 }
 #contribute .container p a:hover {
-  color: #FFCA62;
+  text-decoration: underline;
 }
 #contribute .container ol {
   list-style: decimal inside;
@@ -456,68 +516,30 @@ header .container .link-github span svg path {
 }
 #contribute .container ol li {
   margin-bottom: 1rem;
-  font-size: 1rem;
   line-height: 1.6;
 }
-#contribute .container ol li a {
-  color: #6D0D01;
-  font-weight: bold;
-}
 #contribute .container ol li a:hover {
-  color: #FFCA62;
-}
-#contribute footer {
-  background-color: #FFCA62;
-  padding: 2rem;
-  text-align: center;
-}
-#contribute footer h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #300300;
-  margin-bottom: 1rem;
-}
-#contribute footer a {
-  display: inline-block;
-  background-color: #6D0D01;
-  color: #fdfdfd;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 4px;
-  margin: 0.5rem;
-  transition: background-color 0.3s ease;
-}
-#contribute footer a:hover {
-  background-color: #300300;
-}
-#contribute footer a:focus {
-  outline: 2px dashed #FFCA62;
-  outline-offset: 3px;
+  text-decoration: underline;
 }
 
 #files {
-  background-color: #FDE9C4;
+  background-color: #FFCA62;
   padding: 2.5rem 2rem;
   position: relative;
+  text-align: center;
 }
 #files h3 {
   font-size: 1.8rem;
   font-weight: bold;
   color: #6D0D01;
   margin-bottom: 1.5rem;
+  vertical-align: middle;
 }
 #files h3::before {
-  content: "";
+  content: "◍";
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-image: url("../public/images/hut.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  font-weight: 600;
   margin-right: 1rem;
-  vertical-align: middle;
 }
 #files a {
   display: inline-block;
@@ -526,35 +548,23 @@ header .container .link-github span svg path {
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 5px;
   color: #fdfdfd;
   background-color: #6D0D01;
   transition: background-color 0.3s ease;
 }
+@media (max-width: 585px) {
+  #files a {
+    width: 14rem;
+  }
+}
 #files a:hover {
-  background-color: #300300;
+  background-color: #FFCA62;
+  color: #6D0D01;
+  border: 1px solid #6D0D01;
 }
 #files a:focus {
   outline: 2px dashed #FFCA62;
   outline-offset: 2px;
-}
-#files a.link-downloadcss {
-  background-color: #6D0D01;
-}
-#files a.link-downloadcss:hover {
-  background-color: #300300;
-}
-#files a.link-downloadhtml {
-  background-color: #300300;
-}
-#files a.link-downloadhtml:hover {
-  background-color: #FFCA62;
-}
-#files a.link-codepen {
-  background-color: #6D0D01;
-}
-#files a.link-codepen:hover {
-  background-color: #300300;
 }
 
 aside#styles {
@@ -565,6 +575,11 @@ aside#styles .container {
   text-align: center;
   padding: 5rem;
 }
+@media (max-width: 500px) {
+  aside#styles .container {
+    padding: 1rem;
+  }
+}
 aside#styles .container > a {
   background: #300300;
   color: #FDE9C4;
@@ -574,21 +589,30 @@ aside#styles .container > a {
   margin: 0 auto;
   margin-top: 1rem;
 }
+aside#styles .container > a:hover {
+  background: #FDE9C4;
+  color: #300300;
+  border: 1px solid #300300;
+}
 aside#styles .container ul.features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
-  width: 60%;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
 }
 aside#styles .container ul.features li {
   padding: 1rem;
-  width: 10rem;
-  height: 10rem;
+  width: 14rem;
+  height: 14rem;
   border: 1px solid #300300;
   align-content: center;
   margin: 0 auto;
+}
+aside#styles .container ul.features li a:hover {
+  color: #6D0D01;
+  text-decoration: underline;
 }
 
 aside.profile {
@@ -610,19 +634,27 @@ aside.profile .container ul li a {
   text-decoration: none;
   color: #300300;
 }
+aside.profile .container ul li a:hover {
+  text-decoration: underline;
+}
 aside.profile .container > a {
   display: block;
   padding: 0.5rem;
   max-width: 14rem;
   background: #300300;
-  color: #FDE9C4;
+  color: #fdfdfd;
   margin: 0 auto;
   margin-top: 1rem;
+}
+aside.profile .container > a:hover {
+  background: #fdfdfd;
+  color: #300300;
+  border: 1px solid #300300;
 }
 
 .page-footer {
   background-color: #300300;
-  color: #fdfdfd;
+  color: #FDE9C4;
   padding: 1.5rem 1rem;
 }
 .page-footer .container {
@@ -633,14 +665,14 @@ aside.profile .container > a {
 .page-footer .container p {
   font-size: 0.9rem;
   line-height: 1.4;
-  margin-bottom: 1rem;
 }
 .page-footer .container p a {
-  color: #FFCA62;
-  text-decoration: underline;
+  text-decoration: none;
+  font-style: italic;
 }
 .page-footer .container p a:hover {
-  color: #FDE9C4;
+  color: #FFCA62;
+  text-decoration: underline;
 }
 .page-footer .container ul {
   list-style: none;
@@ -650,19 +682,31 @@ aside.profile .container > a {
   justify-content: center;
   gap: 0.5rem;
 }
+@media (max-width: 650px) {
+  .page-footer .container ul {
+    flex-direction: column;
+  }
+  .page-footer .container ul li a {
+    width: 14rem;
+  }
+}
 .page-footer .container ul li a {
   display: inline-block;
-  background-color: #6D0D01;
-  color: #fdfdfd;
+  background: #FDE9C4;
+  color: #300300;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 .page-footer .container ul li a:hover {
-  background-color: #300300;
+  background: #300300;
+  border: 1px solid #FDE9C4;
+  color: #FDE9C4;
+}
+.page-footer .container ul li a:hover svg path {
+  fill: #FDE9C4;
 }
 .page-footer .container ul li a:focus {
   outline: 2px dashed #FFCA62;
@@ -675,36 +719,15 @@ aside.profile .container > a {
   margin-right: 0.5rem;
 }
 .page-footer .container ul li a svg path {
-  fill: #fdfdfd;
+  fill: #300300;
 }
 .page-footer .container .link-github {
-  background-color: #6D0D01;
-  color: #fdfdfd;
+  background-color: #FDE9C4;
+  color: #300300;
   padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border-radius: 5px;
 }
 .page-footer .container .link-github svg {
   margin-right: 0.5rem;
-}
-.page-footer .container .link-github:hover {
-  background-color: #300300;
-}
-.page-footer .container strong {
-  font-weight: bold;
-}
-.page-footer .credits {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #FDE9C4;
-}
-.page-footer .credits a {
-  color: #FFCA62;
-  text-decoration: underline;
-}
-.page-footer .credits a:hover {
-  color: #FDE9C4;
 }
 
 /*# sourceMappingURL=style.css.map */
