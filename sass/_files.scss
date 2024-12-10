@@ -1,27 +1,19 @@
 #files {
     background-color: $color-other; 
-    padding: 2.5rem 2rem;
+    padding: 2rem;
     position: relative;
     text-align: center;
 
       h3 {
-        font-size: 1.8rem;
-        font-weight: bold;
         color: $color-secondary; 
         margin-bottom: 1.5rem;
         vertical-align: middle;
   
         &::before {
-          content: '◍';
+          content: '◈';
           display: inline-block;
           font-weight: $font-weight-strong;
           margin-right: 1rem;
-        //   width: 50px;
-        //   height: 50px;
-        //   background-image: url('../public/images/hut.png'); 
-        //   background-size: contain;
-        //   background-repeat: no-repeat;  
-        //   vertical-align: middle;
         }
       }
   
@@ -50,31 +42,6 @@
           outline: 2px dashed $color-other; 
           outline-offset: 2px;
         }
-  
-        // &.link-downloadcss {
-        //   background-color: $color-secondary;
-  
-        //   &:hover {
-        //     background-color: $color-primary;
-        //   }
-        // }
-  
-        // &.link-downloadhtml {
-        //   background-color: $color-primary;
-  
-        //   &:hover {
-        //     background-color: $color-other;
-        //   }
-        // }
-  
-        // &.link-codepen {
-        //   background-color: $color-secondary;
-  
-        //   &:hover {
-        //     background-color: $color-primary;
-        //   }
-        // }
-      }
-    
-  }
+    }    
+}
   
