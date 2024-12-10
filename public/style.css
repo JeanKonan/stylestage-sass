@@ -369,29 +369,80 @@ nav ul li a:hover {
 #about {
   display: flex;
   flex-direction: column;
-  padding: 5rem;
-  background-color: #fdfdfd;
+  padding: 5rem 2rem;
 }
 #about .container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template: auto repeat(auto-fit, minmax(200px, 1fr))/40% 60%;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: 2rem;
 }
 #about .container h2 {
   grid-column: span 2;
-  grid-row: 1/2;
-}
-#about .container p {
-  display: block;
-  grid-column: 2/3;
-  grid-row: auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6D0D01;
+  margin-bottom: 2rem;
 }
 #about .container blockquote {
   grid-column: 1/2;
-  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: #300300;
+  text-align: left;
 }
-#about .container ul {
+#about .container blockquote strong {
+  font-weight: bold;
+  color: #6D0D01;
+}
+#about .container blockquote a {
+  color: #6D0D01;
+  text-decoration: underline;
+}
+#about .container blockquote a:hover {
+  color: #FFCA62;
+}
+#about .container blockquote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background: url("../public/images/quote-before.svg") no-repeat center center;
+  background-size: contain;
+}
+#about .container blockquote::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: url("../public/images/quote-after.svg") no-repeat center center;
+  background-size: contain;
+}
+#about .container p {
   grid-column: 2/3;
-  grid-row-start: 2;
+  color: #300300;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+#about .container p a {
+  color: #6D0D01;
+  text-decoration: underline;
+}
+#about .container p a:hover {
+  color: #FFCA62;
 }
 
 #guidelines {

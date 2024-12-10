@@ -1,32 +1,100 @@
 #about {
     display: flex;
     flex-direction: column;
-    padding: 5rem;
-    background-color: $color-background; 
-
+    padding: 5rem 2rem;
+  
     .container {
-        display: grid;
-        grid-template: auto repeat(auto-fit, minmax(200px, 1fr)) / 40% 60%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr; 
+      align-items: start; 
+      gap: 2rem;
+  
+      h2 {
+        grid-column: span 2; 
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-secondary; 
+        margin-bottom: 2rem;
+      }
+  
+      blockquote {
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        position: relative;
+        padding: 2rem;
+        font-style: italic;
+        font-size: 1rem;
+        color: $color-primary;
+        text-align: left;
 
-        h2 {
-            grid-column: span 2;
-            grid-row: 1/2;
+  
+        strong {
+          font-weight: bold; 
+          color: $color-secondary;
         }
-
-        p {
-            display: block;
-            grid-column: 2/3;
-            grid-row: auto;
+  
+        a {
+          color: $color-secondary;
+          text-decoration: underline;
+  
+          &:hover {
+            color: $color-other;
+          }
         }
-
-        blockquote {
-            grid-column: 1/2;
-            grid-row: 2/3;
+  
+        // SVG Quotes
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0; 
+          left: 10px;
+          width: 40px;
+          height: 40px;
+          background: url('../public/images/quote-before.svg') no-repeat center center; // Replace with the actual path to the SVG
+          background-size: contain;
         }
-
-        ul {
-            grid-column: 2/3;
-            grid-row-start: 2;
+  
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0; 
+          right: 10px;
+          width: 40px;
+          height: 40px;
+          background: url('../public/images/quote-after.svg') no-repeat center center; // Replace with the actual path to the SVG
+          background-size: contain;
         }
+      }
+  
+      p {
+        grid-column: 2/3; 
+        color: $color-primary;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+  
+        a {
+          color: $color-secondary;
+          text-decoration: underline;
+  
+          &:hover {
+            color: $color-other;
+          }
+        }
+      }
     }
-}
+  }
+  
+
+
+
+
+
+
+
+
