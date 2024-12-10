@@ -11,10 +11,10 @@
   --font-family: "calistoga", sans-serif;
   --font-title-family: "unbounded";
   --font-weight-strong: 500;
-  --font-size-h1: 2rem;
-  --font-size-h2: 1.5rem;
-  --font-size-h3: 1.3rem;
-  --font-size-h4: 1.15rem;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.2rem;
   --font-size-text: 1rem;
   --border-radius: 15px;
 }
@@ -218,11 +218,11 @@ header .container {
 }
 header .container h1 {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 header .container h2 {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 header .container p {
   display: inline;
@@ -263,10 +263,10 @@ header .container .link-github span svg path {
     padding: 1rem;
   }
   header .container h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   header .container h2 {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
   }
   header .container p {
     font-size: 1rem;
@@ -286,10 +286,10 @@ header .container .link-github span svg path {
     padding: 0.5rem;
   }
   header .container h1 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
   }
   header .container h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   header .container p {
     font-size: 0.9rem;
