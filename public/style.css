@@ -11,7 +11,11 @@
   --color-anchor: #6D0D01;
   --font-family: "Charis SIL", serif;
   --font-title-family: "unbounded";
+<<<<<<< HEAD
+  --font-weight-strong: 500;
+=======
   --font-weight-strong: 600;
+>>>>>>> ed77c7ce0a4495bd2db8a23f15a558fbc96d8e84
   --font-size-h1: 2rem;
   --font-size-h2: 1.5rem;
   --font-size-h3: 1.3rem;
@@ -371,7 +375,7 @@ nav ul li a:hover {
   flex-direction: column;
   padding: 5rem 2rem;
 }
-#about .container {
+#about .container:first-of-type {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -379,7 +383,7 @@ nav ul li a:hover {
   align-items: start;
   gap: 2rem;
 }
-#about .container h2 {
+#about .container:first-of-type h2 {
   grid-column: span 2;
   text-align: center;
   font-size: 2rem;
@@ -387,7 +391,7 @@ nav ul li a:hover {
   color: #6D0D01;
   margin-bottom: 2rem;
 }
-#about .container blockquote {
+#about .container:first-of-type blockquote {
   grid-column: 1/2;
   display: flex;
   flex-direction: column;
@@ -399,18 +403,18 @@ nav ul li a:hover {
   color: #300300;
   text-align: left;
 }
-#about .container blockquote strong {
+#about .container:first-of-type blockquote strong {
   font-weight: bold;
   color: #6D0D01;
 }
-#about .container blockquote a {
+#about .container:first-of-type blockquote a {
   color: #6D0D01;
   text-decoration: underline;
 }
-#about .container blockquote a:hover {
+#about .container:first-of-type blockquote a:hover {
   color: #FFCA62;
 }
-#about .container blockquote::before {
+#about .container:first-of-type blockquote::before {
   content: "";
   position: absolute;
   top: 0;
@@ -420,7 +424,7 @@ nav ul li a:hover {
   background: url("../public/images/quote-before.svg") no-repeat center center;
   background-size: contain;
 }
-#about .container blockquote::after {
+#about .container:first-of-type blockquote::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -430,18 +434,18 @@ nav ul li a:hover {
   background: url("../public/images/quote-after.svg") no-repeat center center;
   background-size: contain;
 }
-#about .container p {
+#about .container:first-of-type p {
   grid-column: 2/3;
   color: #300300;
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-#about .container p a {
+#about .container:first-of-type p a {
   color: #6D0D01;
   text-decoration: underline;
 }
-#about .container p a:hover {
+#about .container:first-of-type p a:hover {
   color: #FFCA62;
 }
 
