@@ -1,8 +1,8 @@
 aside.profile {
-    background: $color-primary;
+    background: $color-background;
 
     .container{
-        color: $color-tertiary;
+        color: $color-primary;
         padding: 5rem;
         text-align: center;
 
@@ -14,7 +14,7 @@ aside.profile {
 
                 a {
                     text-decoration: none;
-                    color: $color-tertiary;
+                    color: $color-primary;
                 }
             }
         }
@@ -23,7 +23,8 @@ aside.profile {
             display: block;
             padding: .5rem;
             max-width: 14rem;
-            background: $color-tertiary;
+            background: $color-primary;
+            color: $color-tertiary;
             margin: 0 auto;
             margin-top: 1rem;
         }

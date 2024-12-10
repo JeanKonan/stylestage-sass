@@ -1,0 +1,63 @@
+// _guidelines.scss
+
+#guidelines {
+    background-color: $color-background; // Light background for readability
+    color: $color-primary; // Primary text color
+    padding: 2rem 1.5rem;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-secondary; // Secondary color for headings
+        margin-bottom: 1.5rem;
+      }
+  
+      h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-secondary; // Secondary color for subheadings
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+  
+        a {
+          color: $color-secondary; // Link color
+          text-decoration: underline;
+  
+          &:hover {
+            color: $color-other; // Hover effect for links
+          }
+        }
+      }
+  
+      .link-guidelines {
+        display: inline-block;
+        background-color: $color-secondary; // Secondary color for button
+        color: $color-background; // White text
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: $color-primary; // Primary color on hover
+        }
+  
+        &:focus {
+          outline: 2px dashed $color-other; // Focus outline for accessibility
+          outline-offset: 3px;
+        }
+      }
+    }
+  }
+  
