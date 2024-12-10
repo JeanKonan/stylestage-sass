@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 5rem 2rem;
   
-    .container {
+    .container:first-of-type {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
@@ -55,7 +55,7 @@
           left: 10px;
           width: 40px;
           height: 40px;
-          background: url('../public/images/quote-before.svg') no-repeat center center; // Replace with the actual path to the SVG
+          background: url('../public/images/quote-before.svg') no-repeat center center; 
           background-size: contain;
         }
   
@@ -66,7 +66,7 @@
           right: 10px;
           width: 40px;
           height: 40px;
-          background: url('../public/images/quote-after.svg') no-repeat center center; // Replace with the actual path to the SVG
+          background: url('../public/images/quote-after.svg') no-repeat center center; 
           background-size: contain;
         }
       }
