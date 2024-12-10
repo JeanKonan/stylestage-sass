@@ -38,7 +38,7 @@ $colors: map-merge(
 $link-color: color(secondary) !default;
 $border-radius: 15px !default;
 
-$font-weight-strong: 500 !default;
+$font-weight-strong: 600 !default;
 $font-size-h1: 2rem !default;
 $font-size-h2: 1.5rem !default;
 $font-size-h3: 1.3rem !default;
@@ -60,7 +60,7 @@ $font-sizes: (
   }
 
   --color-anchor: #{$link-color};
-  --font-family: "calistoga", sans-serif;
+  --font-family: "Charis SIL", serif;
   --font-title-family: "unbounded";
   --font-weight-strong: #{$font-weight-strong};
 

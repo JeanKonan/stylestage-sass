@@ -1,6 +1,6 @@
 .page-footer {
     background-color: $color-primary; 
-    color: $color-background;
+    color: $color-tertiary;
     padding: 1.5rem 1rem; 
   
     .container {
@@ -11,14 +11,15 @@
       p {
         font-size: 0.9rem;
         line-height: 1.4;
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
   
         a {
-          color: $color-other;
-          text-decoration: underline;
+          text-decoration: none;
+          font-style: italic;
   
           &:hover {
-            color: $color-tertiary;
+            color: $color-other;
+            text-decoration: underline;
           }
         }
       }
@@ -30,21 +31,38 @@
         display: flex;
         justify-content: center;
         gap: 0.5rem;
+
+        @media (max-width: 650px) {
+            flex-direction: column;
+
+            li {
+                a {
+                    width: 14rem;
+                }
+            }
+        }
   
         li {
           a {
             display: inline-block;
-            background-color: $color-secondary; 
-            color: $color-background; 
+            background: $color-tertiary; 
+            color: $color-primary; 
             padding: 0.5rem 1rem; 
             font-size: 0.9rem; 
             font-weight: bold;
             text-decoration: none;
-            border-radius: 5px;
             transition: background-color 0.3s ease;
   
             &:hover {
-              background-color: $color-primary; 
+              background: $color-primary;
+              border: 1px solid $color-tertiary;
+              color: $color-tertiary;
+
+              svg {
+                path {
+                    fill: $color-tertiary;
+                }
+              }
             }
   
             &:focus {
@@ -59,7 +77,7 @@
               margin-right: 0.5rem;
   
               path {
-                fill: $color-background; 
+                fill: $color-primary; 
               }
             }
           }
@@ -67,40 +85,16 @@
       }
   
       .link-github {
-        background-color: $color-secondary; 
-        color: $color-background;
-        padding: 0.5rem 1rem; 
-        font-size: 0.9rem; 
-        font-weight: bold;
-        border-radius: 5px;
+        background-color: $color-tertiary; 
+        color: $color-primary;
+        padding: 0.5rem 1rem;
   
         svg {
           margin-right: 0.5rem; 
         }
   
-        &:hover {
-          background-color: $color-primary; 
-        }
       }
-  
-      strong {
-        font-weight: bold;
-      }
+
     }
-  
-    .credits {
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      color: $color-tertiary;
-  
-      a {
-        color: $color-other;
-        text-decoration: underline;
-  
-        &:hover {
-          color: $color-tertiary;
-        }
-      }
-    }
-  }
+}
   

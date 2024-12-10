@@ -15,6 +15,10 @@ aside.profile {
                 a {
                     text-decoration: none;
                     color: $color-primary;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -24,9 +28,15 @@ aside.profile {
             padding: .5rem;
             max-width: 14rem;
             background: $color-primary;
-            color: $color-tertiary;
+            color: $color-background;
             margin: 0 auto;
             margin-top: 1rem;
+
+            &:hover {
+                background: $color-background;
+                color: $color-primary;
+                border: 1px solid $color-primary;
+            }
         }
     }
 }
