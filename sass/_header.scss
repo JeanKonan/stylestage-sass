@@ -1,69 +1,139 @@
-// body {
-//     .skip-link {
+body {
+    .skip-link {
+        display: none;
+    }
+}
 
-//     &::before {
-//         content: '';
-//         display: block;
-//         position: static;
-//         // top: -100px;
-//         width: 100%;
-//         height: 200px;
-//         background-image: url(../public/images/african.jpg);
-//         background-size: cover; // Ensures the image covers the pseudo-element
-//         background-position: center; // Centers the image
-//         background-repeat: no-repeat; // Prevents the image from repeating
-//     }
-// }
-// }
 header {
     width: 100%;
     height: 15rem;
-    padding: 2rem;
-    background-image: url(../public/images/african.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
     box-sizing: content-box;
-    color: $color-tertiary;
-    
+
+    &::before {
+        display: flex;
+        position: absolute;
+        content: "";
+        background-image: url(../public/images/bg-pic.jpg);
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: width 0.3s ease;
+    }
+
     .container {
-        padding: 1rem;
-        width: 70%;
-        height: 90%;
-        background: rgba($color: $color-primary, $alpha: .5);
-        border-radius: $border-radius;
-        border: .6rem dotted $color-primary;
-        box-sizing: content-box;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        margin-left: 50%;
+        padding: 0 2rem;
+        background: $color-tertiary;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: $font-size-h1;
+        }
 
         h2 {
             text-align: left;
+            font-size: $font-size-h2;
         }
 
         p {
-            // display: inline-block;
+            display: inline;
+            text-align: left;
+
             a {
                 text-decoration: none;
-                color: $color-tertiary;
+                color: $color-primary;
             }
         }
 
         .link-github {
-            padding: 1rem;
-            width: 100px;
-            height: 55px;
-            background-color: $color-tertiary;
-            border-radius: $border-radius;
+            display: inline;
+            padding: 0.5rem;
+            width: 14rem;
+            background-color: $color-primary;
+            color: $color-tertiary;
+            text-align: center;
 
-            svg {
-                display: inline;
-                width: 20px;
-                height: 20px;
+            span {
+                vertical-align: middle;
+                margin: 0 auto;
 
-                path {
-                    fill: $color-primary;
+                svg {
+                    display: inline;
+                    width: 20px;
+                    height: 20px;
+
+                    path {
+                        fill: $color-tertiary;
+                    }
                 }
             }
         }
     }
-    
+}
+
+@media (max-width: 768px) {
+    header {
+        &::before {
+            width: 30%;
+        }
+
+        .container {
+            width: 70%;
+            margin-left: 30%;
+            padding: 1rem;
+
+            h1 {
+                font-size: calc($font-size-h1 - 0.5rem);
+            }
+
+            h2 {
+                font-size: calc($font-size-h2 - 0.3rem);
+            }
+
+            p {
+                font-size: $font-size-text;
+            }
+
+            .link-github {
+                width: auto;
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        &::before {
+            width: 40%;
+        }
+
+        .container {
+            width: 60%;
+            margin-left: 40%;
+            padding: 0.5rem;
+
+            h1 {
+                font-size: calc($font-size-h1 - 0.8rem);
+            }
+
+            h2 {
+                font-size: calc($font-size-h2 - 0.5rem);
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
 }
