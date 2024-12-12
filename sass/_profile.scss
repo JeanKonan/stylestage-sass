@@ -6,11 +6,25 @@ aside.profile {
         padding: 5rem;
         text-align: center;
 
+        @media (max-width: 650px) {
+            padding: 5rem 1rem;
+        }
+
         ul {
             display: inline-block;
             li {
                 display: inline-block;
                 list-style: none;
+
+                &:not(:last-of-type):after {
+                    content: '|';
+                }
+
+                span {
+                    &:last-of-type {
+                        font-weight: $font-weight-strong;
+                    }
+                }
 
                 a {
                     text-decoration: none;

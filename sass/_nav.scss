@@ -24,6 +24,18 @@ nav {
                 color: $color-secondary;
             }
 
+            @media (max-width: 900px) {
+                
+                &:last-of-type:after {
+                    position: absolute;
+                    content: '◈';
+                    margin-left: .3rem;
+                    text-align: center;
+                    font-size: $font-size-h2;
+                    color: $color-secondary;
+                }
+            }
+
             a {
                 display: inline;
                 font-size: $font-size-h2;

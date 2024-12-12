@@ -1,36 +1,48 @@
 #about {
     display: flex;
     flex-direction: column;
-    padding: 5rem 2rem;
+    padding: 2rem;
   
     .container:first-of-type {
-      max-width: 1200px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
       display: grid;
-      grid-template-columns: 1fr 2fr;
-      grid-template-columns: auto auto auto auto;
-      align-items: start; 
-   
+      align-items: start;
+
+      @media (min-width: 900px) {
+        grid-template-columns: 40% 1fr;
+        grid-template-rows: auto auto auto auto;
+
+        h2 {
+            grid-column: span 2;
+        }
+
+        blockquote {
+            grid-column: 1/2;
+            grid-row: 2/5;
+        }
+
+        p {
+            grid-column: 2/3;
+        }
+      }
   
       h2 {
-        grid-column: span 2; 
         text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: $color-secondary; 
+        font-size: $font-size-h1;
+        font-weight: $font-weight-strong;
         margin-bottom: 2rem;
       }
   
       blockquote {
-        grid-column: 1/2;
-        grid-row: 2/4;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
         position: relative;
         padding: 2rem;
         font-style: italic;
-        color: $color-primary;
+
+        p {
+            margin-bottom: 0;
+            color: $color-secondary;
+            font-size: calc($font-size-text + .2rem);
+        }
      
         strong {
           font-weight: bold; 
@@ -39,14 +51,12 @@
   
         a {
           color: $color-secondary;
-          text-decoration: underline;
   
           &:hover {
-            color: $color-other;
+            text-decoration: underline;
           }
         }
-  
-        // SVG Quotes
+
         &::before {
           content: '';
           position: absolute;
@@ -62,7 +72,7 @@
           content: '';
           position: absolute;
           bottom: 0; 
-          right: 10px;
+          right: 3rem;
           width: 40px;
           height: 40px;
           background: url('../public/images/quote-after.svg') no-repeat center center; 
@@ -71,18 +81,16 @@
       }
   
       p {
-        grid-column: 2/3; 
         color: $color-primary;
         font-size: 1rem;
         line-height: 1.6;
         margin-bottom: 1.5rem;
   
         a {
-          color: $color-secondary;
-          text-decoration: underline;
+          color: $color-primary;
   
           &:hover {
-            color: $color-other;
+            text-decoration: underline;
           }
         }
       }
@@ -90,63 +98,98 @@
 
     .container:last-of-type {
         display: grid;
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: 40% 1fr;
-        grid-auto-flow: dense;
- 
-        h2 {
-            grid-column: span 2;
-            grid-row: 1/2;
+        
+        @media (min-width: 900px) {
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 30% 1fr;
+            grid-auto-flow: dense;
+
+            h2 {
+                grid-column: span 2;
+                grid-row: 1/2;
+            }
+     
+            p {
+                grid-column: 1/2;
+                grid-row: 2/4;
+                padding: 1rem;
+     
+                &:nth-of-type(1) {
+                    grid-row: span 1;
+                }
+     
+                &:nth-of-type(3) {
+                    grid-row: span 1;
+                    margin-top: -2.5rem;
+                }
+     
+                &:nth-of-type(4) {
+                    grid-row: span 1;
+                    margin-top: -2.5rem;
+                }
+
+                &:nth-of-type(2) {
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    padding: 1rem;
+                }
+            }
+
+            ul {
+                grid-column: 2/3;
+                grid-row: 3/5;
+                margin-top: -10rem;
+            }
+
+            &::before {
+                content: "";
+                grid-column: 2/3;
+                grid-row: 2/span 3;
+                background-color: $color-tertiary;
+                z-index: -1;
+                position: relative;
+            }
         }
  
         p {
-            grid-column: 1/2;
-            grid-row: 2/4;
-            padding: 1rem;
- 
-            &:nth-of-type(1) {
-                grid-row: span 1;
-            }
- 
-            &:nth-of-type(3) {
-                grid-row: span 1;
-            }
- 
-            &:nth-of-type(4) {
-                grid-row: span 1;
-            }
- 
             &:nth-of-type(2) {
-                grid-column: 2/3;
-                grid-row: 2/3;
                 color: $color-secondary;
                 padding: 1rem;
+                background: $color-tertiary;
+                margin-bottom: 0;
+                font-weight: $font-weight-strong;
             }
         }
  
         ul {
-            grid-column: 2/3;
-            grid-row: 3/5;
-            // background: $color-tertiary;
             padding: 1rem;
+            background: $color-tertiary;
+            margin-bottom: 1rem;
  
             li {
                 display: inline-block;
                 border: 1px solid $color-primary;
                 padding: .5rem;
+                text-transform: capitalize;
+
+                &:hover {
+                    color: $color-tertiary;
+                    background: $color-primary;
+                    border: none;
+                }
             }
         }
  
-        &::before {
-            content: "";
-            grid-column: 2/3;
-            grid-row: 2/span 3;
-            background-color: $color-tertiary;
-            z-index: -1;
-            position: relative;
-        }
+        // &::before {
+        //     content: "";
+        //     grid-column: 1/2;
+        //     grid-row: 3/span 2;
+        //     background-color: $color-tertiary;
+        //     z-index: -1;
+        //     position: relative;
+        // }
     }
-  }
+}
   
 
 

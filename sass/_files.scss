@@ -4,6 +4,10 @@
     position: relative;
     text-align: center;
 
+    @media (max-width: 420px) {
+        padding: 1rem;
+    }
+
       h3 {
         color: $color-secondary; 
         margin-bottom: 1.5rem;
@@ -30,6 +34,10 @@
 
         @media (max-width: 585px) {
             width: 14rem;
+        }
+        
+        @media (max-width: 585px) {
+            width: 11.5rem;
         }
   
         &:hover {
