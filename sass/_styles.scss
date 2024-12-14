@@ -18,6 +18,8 @@ aside#styles {
             width: 14rem;
             margin: 0 auto;
             margin-top: 1rem;
+            border: 1px solid $color-primary;
+            transition: background 0.3s ease;
 
             &:hover {
                 background: $color-tertiary;

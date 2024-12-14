@@ -41,6 +41,8 @@ nav {
                 font-size: $font-size-h2;
                 padding: .5rem;
                 height: 100%;
+                transition: background 0.3s ease;
+                
                 &:hover {
                     background: $color-primary;
                     color: $color-other;

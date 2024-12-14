@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: $color-primary;
     background: $color-background;
@@ -47,6 +51,16 @@ h1, h2 {
         content: '◈';
         margin-left: -.5rem;
         margin-right: .5rem;
+        text-align: center;
+        font-size: $font-size-h2;
+        align-content: center;
+    }
+
+    &::after {
+        display: inline-block;
+        content: '◈';
+        margin-left: .5rem;
+        margin-right: -.5rem;
         text-align: center;
         font-size: $font-size-h2;
         align-content: center;

@@ -107,6 +107,10 @@ q::after {
   content: "";
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: #300300;
   background: #fdfdfd;
@@ -157,6 +161,15 @@ h1::before, h2::before {
   content: "◈";
   margin-left: -0.5rem;
   margin-right: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  align-content: center;
+}
+h1::after, h2::after {
+  display: inline-block;
+  content: "◈";
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
   text-align: center;
   font-size: 1.5rem;
   align-content: center;
@@ -264,6 +277,8 @@ header .container .link-github {
   background-color: #300300;
   color: #FDE9C4;
   text-align: center;
+  border: 1px solid #300300;
+  transition: background 0.3s ease;
 }
 header .container .link-github:hover {
   background: #FDE9C4;
@@ -368,6 +383,7 @@ nav ul li a {
   font-size: 1.5rem;
   padding: 0.5rem;
   height: 100%;
+  transition: background 0.3s ease;
 }
 nav ul li a:hover {
   background: #300300;
@@ -528,11 +544,12 @@ nav ul li a:hover {
   border: 1px solid #300300;
   padding: 0.5rem;
   text-transform: capitalize;
+  transition: background 0.3s ease;
 }
 #about .container:last-of-type ul li:hover {
   color: #FDE9C4;
   background: #300300;
-  border: none;
+  border: 1px solid #300300;
 }
 
 #guidelines {
@@ -566,6 +583,7 @@ nav ul li a:hover {
   width: 14rem;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
+  border: 1px solid #300300;
   transition: background-color 0.3s ease;
   margin: 0 auto;
 }
@@ -639,6 +657,7 @@ nav ul li a:hover {
   text-decoration: none;
   color: #fdfdfd;
   background-color: #6D0D01;
+  border: 1px solid #6D0D01;
   transition: background-color 0.3s ease;
 }
 @media (max-width: 585px) {
@@ -682,6 +701,8 @@ aside#styles .container > a {
   width: 14rem;
   margin: 0 auto;
   margin-top: 1rem;
+  border: 1px solid #300300;
+  transition: background 0.3s ease;
 }
 aside#styles .container > a:hover {
   background: #FDE9C4;
@@ -748,8 +769,10 @@ aside.profile .container > a {
   max-width: 14rem;
   background: #300300;
   color: #fdfdfd;
+  border: 1px solid #300300;
   margin: 0 auto;
   margin-top: 1rem;
+  transition: background 0.3s ease;
 }
 aside.profile .container > a:hover {
   background: #fdfdfd;
@@ -799,6 +822,7 @@ aside.profile .container > a:hover {
   display: inline-block;
   background: #FDE9C4;
   color: #300300;
+  border: 1px solid #FDE9C4;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: bold;

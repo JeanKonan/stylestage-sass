@@ -43,8 +43,10 @@ aside.profile {
             max-width: 14rem;
             background: $color-primary;
             color: $color-background;
+            border: 1px solid $color-primary;
             margin: 0 auto;
             margin-top: 1rem;
+            transition: background 0.3s ease;
 
             &:hover {
                 background: $color-background;

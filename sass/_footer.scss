@@ -46,7 +46,8 @@
           a {
             display: inline-block;
             background: $color-tertiary; 
-            color: $color-primary; 
+            color: $color-primary;
+            border: 1px solid $color-tertiary;
             padding: 0.5rem 1rem; 
             font-size: 0.9rem; 
             font-weight: bold;

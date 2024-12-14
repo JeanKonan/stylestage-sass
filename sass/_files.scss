@@ -29,7 +29,8 @@
         font-weight: bold;
         text-decoration: none;
         color: $color-background; 
-        background-color: $color-secondary; 
+        background-color: $color-secondary;
+        border: 1px solid $color-secondary;
         transition: background-color 0.3s ease;
 
         @media (max-width: 585px) {
